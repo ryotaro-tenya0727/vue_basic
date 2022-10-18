@@ -17,9 +17,10 @@
           count: 0,
         },
         watch: {
-          count: function (newCount, oldCount) {
-            console.log('newCount:' + newCount);
-            console.log('oldCount:' + oldCount);
+          count: function (newCount) {
+            if (newCount > 100) {
+              console.log('入力値が100を超えました');
+            }
           },
         },
       });
